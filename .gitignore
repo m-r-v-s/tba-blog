@@ -21,3 +21,24 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+.settings/
+.loadpath
+.recommenders
+target/
+
+# STS (Spring Tool Suite)
+.springBeans
+
+# Annotation Processing
+.apt_generated/
+.apt_generated_test/
+
+
+# Spring Boot Tooling
+.sts4-cache/
