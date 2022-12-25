@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4c684987-299c-4366-acae-a434425d1581" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/Notes.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/tba/backend/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/tba/backend/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/tba/backend/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/tba/backend/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/tba/backend/service/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/tba/src/components/RegistrationForm/registerBasic.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/tba/src/components/RegistrationForm/registerDetails.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/tba/src/components/RegistrationForm/registerForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/tba/src/components/RegistrationForm/registerSlice.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/tba/src/globalstate/reducers/index.tsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2JGfN7Q4gq4hWlTYNERgEdPF6JM" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/mathias/Documents/Repos/tba-blog",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "ts.external.directory.path": "/home/mathias/Documents/Repos/tba-blog/frontend/tba/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/tba/src/components" />
+      <recent name="$PROJECT_DIR$/frontend/tba/src/components/RegistrationForm" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4c684987-299c-4366-acae-a434425d1581" name="Changes" comment="" />
+      <created>1671709297272</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1671709297272</updated>
+      <workItem from="1671709298320" duration="369000" />
+      <workItem from="1671830312911" duration="1471000" />
+      <workItem from="1671832354853" duration="4899000" />
+      <workItem from="1671868024917" duration="6181000" />
+      <workItem from="1671874398090" duration="17880000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

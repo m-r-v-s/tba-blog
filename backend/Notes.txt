@@ -1,0 +1,10 @@
+creates new database
+    sudo docker run --name <containername> -p 8000:8000 -e POSTGRES_USER=<username> -e POSTGRES_PASSWORD=<password> -d <name of image>
+    sudo docker run --name tba-backend-db -p 5432:5432 -e POSTGRES_USER=mathias -e POSTGRES_PASSWORD=123 -d postgres //
+    docker run --name tba-backend-db -p 8001:8001 -e POSTGRES_USER=mathias -e POSTGRES_PASSWORD=123 -e POSTGRES_DB=tba-backend -d postgres
+    docker run --name tba-backend-db -p 5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=password -e POSTGRES_DB=tba-backend -d postgres -c "listen_addresses=*"
+
+
+Rich text editors: These are specialized tools that allow users to create and format text in a WYSIWYG (What You See Is What You Get) fashion. There are several rich text editors available for use with React, such as Draft.js, Quill, and ProseMirror.
+
+Markdown editors: If you want to allow users to write in Markdown syntax, you can use a Markdown editor such as SimpleMDE or React-Markdown.
