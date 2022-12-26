@@ -1,0 +1,58 @@
+fieldset{
+    position: relative;
+    left: 25vw;
+    top: 25vh;
+    width: 50vw;
+    max-width: 600px;
+    height: 50vh;
+    border-style: solid;
+    border-width: 4px;
+    padding: 10px;
+    /*justify-content: center;*/
+}
+
+legend {
+    font-size: 35px;
+}
+
+.register-field label {
+    margin-left: 5%;
+    display: block;
+    font-size: 30px ;
+    max-font-size: 1px;
+    }
+
+.register-field {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: 15%;
+}
+
+.register-field input {
+    padding: 2%;
+    margin-left: 5%;
+    height: 15%;
+    font-size: 2vw;
+    max-width: 250px;
+    max-height: 100px;
+}
+
+.register-button{
+    text-align: center;
+}
+
+button{
+    width: 90px;
+    height: 55px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+button[name="back"] {
+
+}
+button[name="next"] {
+
+
+
+ }
