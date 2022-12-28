@@ -1,10 +1,10 @@
 fieldset{
     position: relative;
-    left: 25vw;
-    top: 25vh;
+    left: 30vw;
+    top: 20vh;
     width: 50vw;
     max-width: 600px;
-    height: 50vh;
+    height: 60vh;
     border-style: solid;
     border-width: 4px;
     padding: 10px;
@@ -23,17 +23,16 @@ legend {
     }
 
 .register-field {
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
     margin-left: 15%;
 }
 
-.register-field input {
+.register-field input,select {
     padding: 2%;
     margin-left: 5%;
-    height: 15%;
     font-size: 2vw;
-    max-width: 250px;
+    max-width: 350px;
     max-height: 100px;
 }
 
@@ -41,7 +40,7 @@ legend {
     text-align: center;
 }
 
-button{
+button, .register-button input{
     width: 90px;
     height: 55px;
     display: inline-block;
