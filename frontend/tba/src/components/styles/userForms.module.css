@@ -1,5 +1,4 @@
 .register{
-    z-index: -1;
     position: relative;
     left: 35vw;
     top: 15vh;
@@ -17,7 +16,7 @@ legend {
     font-size: 35px;
 }
 
-.registerField label {
+.register-field label {
     margin-left: 5%;
     display: block;
     font-size: 30px ;

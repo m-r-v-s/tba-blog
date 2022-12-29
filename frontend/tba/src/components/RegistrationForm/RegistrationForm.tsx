@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 import {useAppDispatch, useAppSelector} from "../../app/hooks";
 import {nextView, prevView, updateBasic} from "./registerSlice";
 import User from "../../app/interfaces/User";
-import "../styles/userForms.module.css";
+import styles from "../styles/userForms.module.css";
 
 export const REGISTER_BASIC = "REGISTER_BASIC";
 export const REGISTER_DETAILS = "REGISTER_DETAILS";
@@ -47,20 +47,19 @@ export default function RegistrationForm() {
     switch (mode) {
         case REGISTER_BASIC:
             return <>
-                <fieldset className="register">
+                <fieldset className={styles.register}>
                     <legend> Choose a Username and Password</legend>
                     <h3></h3>
-                    <div className="register-field">
+                    <div className={styles.registerField}>
                         <label htmlFor="username">Username: </label>
                         <input id="username" type="text" name="username" placeholder="...username"
-                               className="register-input_text"
                                value={username}
                                onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                                    e.preventDefault();
                                    setUsername(e.currentTarget.value);}
                                }/>
                     </div>
-                    <div className="register-field">
+                    <div className={styles.registerField}>
                         <label htmlFor="password">Password: </label>
                         <input id="password" type="text" name="password" placeholder="...password"
                                value={password}
@@ -69,7 +68,7 @@ export default function RegistrationForm() {
                                setPassword(e.currentTarget.value);}
                                }/>
                     </div>
-                    <div className="register-field">
+                    <div className={styles.registerField}>
                         <label htmlFor="em"> Email: </label>
                         <input id="em" type="email" name="email" placeholder="Your email..."
                                value={email}
@@ -80,7 +79,7 @@ export default function RegistrationForm() {
                                }
                                }/>
                     </div>
-                    <div className="register-button">
+                    <div className={styles.registerButton}>
                         <button name="back" value="Back"
                                 onClick={() => {
                                     setMode(REGISTER_BASIC);
@@ -98,11 +97,10 @@ export default function RegistrationForm() {
             </>
         case "REGISTER_DETAILS":
             return <>
-                <div className="register-form">
                     <form onSubmit={handleSubmit}>
-                        <fieldset className="register">
+                        <fieldset className={styles.register}>
                             <legend> About yourself</legend>
-                            <div className="register-field">
+                            <div className={styles.registerField}>
                                 <label htmlFor="fn">Firstname: </label>
                                 <input id="fn" type="text" name="firstname" placeholder="Your first name..."
                                        value={firstname}
@@ -111,7 +109,7 @@ export default function RegistrationForm() {
                                            setFirstname(e.currentTarget.value);
                                        }}/>
                             </div>
-                            <div className="register-field">
+                            <div className={styles.registerField}>
                                 <label htmlFor="fn">Lastname: </label>
                                 <input type="text" id="lastname" placeholder="Your last name..."
                                        value={lastname}
@@ -120,7 +118,7 @@ export default function RegistrationForm() {
                                            setLastname(e.currentTarget.value);
                                        }}/>
                             </div>
-                            <div className="register-field">
+                            <div className={styles.registerField}>
                                 <label htmlFor="country">Country: </label>
                                 <select name="country" id="country"
                                         value={country}
@@ -371,7 +369,7 @@ export default function RegistrationForm() {
                                     <option value="Zimbabwe">Zimbabwe</option>
                                 </select>
                             </div>
-                            <div className="register-button">
+                            <div className={styles.registerButton}>
                                 <button name="back" value="Back"
                                         onClick={() => {
                                             setMode(REGISTER_BASIC);
@@ -382,12 +380,11 @@ export default function RegistrationForm() {
                             </div>
                         </fieldset>
                     </form>
-                </div>
             </>
         case "REGISTER_CONFIRM":
             greetUser(username);
             return <>
-                <div className="register-form">
+                <div className={styles.registerForm}>
                     <button name="done" value="Done"/>
                 </div>
             </>
