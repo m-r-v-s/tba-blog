@@ -8,3 +8,13 @@ creates new database
 Rich text editors: These are specialized tools that allow users to create and format text in a WYSIWYG (What You See Is What You Get) fashion. There are several rich text editors available for use with React, such as Draft.js, Quill, and ProseMirror.
 
 Markdown editors: If you want to allow users to write in Markdown syntax, you can use a Markdown editor such as SimpleMDE or React-Markdown.
+
+    Semantic UI: A library of UI components that is designed to be easily customizable and themable.
+
+    Bootstrap: A popular front-end framework that includes a collection of HTML, CSS, and JavaScript-based design templates for building responsive and mobile-first websites.
+
+    Ant Design: A library of high-quality UI components designed for enterprise-level applications.
+
+    Element: A library of UI components for building web applications with a desktop application-like experience.
+
+    Materialize: A responsive front-end framework based on Material Design principles.

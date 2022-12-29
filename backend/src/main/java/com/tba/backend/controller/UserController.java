@@ -13,7 +13,7 @@ public class UserController {
 
     @Autowired
     private UserService userService;
-
+    @CrossOrigin(origins= {"http://localhost:8080", "http://localhost:3000"})
     @PostMapping("/add")
     public String add(@RequestBody User user)
     {
@@ -21,8 +21,13 @@ public class UserController {
         return "User added";
     }
     @GetMapping("/getAll")
+    @CrossOrigin(origins= {"http://localhost:8080", "http://localhost:3000"})
     List<User> List(){
         return userService.getAllUsers();
     }
-
+    @CrossOrigin(origins= {"http://localhost:8080", "http://localhost:3000"})
+    @GetMapping("/get/{username}")
+    public User User(@PathVariable String username){
+        return userService.getUserByUsername(username);
+    }
 }

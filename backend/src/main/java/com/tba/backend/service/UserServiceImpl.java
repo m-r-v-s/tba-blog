@@ -19,4 +19,5 @@ public class UserServiceImpl implements UserService {
     {
         return userRepository.findAll();
     }
+    public User getUserByUsername(String name) { return userRepository.findFirstByUsername(name);}
 }

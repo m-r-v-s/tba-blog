@@ -4,14 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c684987-299c-4366-acae-a434425d1581" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/tba/src/app/views/UserRegistration.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/tba/src/components/RegistrationForm/registrationForm.css" afterDir="false" />
+    <list default="true" id="4c684987-299c-4366-acae-a434425d1581" name="Changes" comment="registration form react logic with use State and basic styling for &quot;register basic&quot;">
+      <change afterPath="$PROJECT_DIR$/frontend/tba/src/App.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/tba/src/app/interfaces/User.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/tba/src/app/views/UserLogin.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/tba/src/components/LoginForm/LoginForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/tba/src/components/LoginForm/loginSlice.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/tba/src/components/Navbar/Navbar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/tba/src/components/styles/navbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tba/src/components/RegistrationForm/registerBasic.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tba/src/components/RegistrationForm/RegistrationForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tba/src/components/RegistrationForm/registerDetails.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tba/src/components/RegistrationForm/registerForm.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tba/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tba/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Notes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/tba/backend/BackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/tba/backend/BackendApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/tba/backend/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/tba/backend/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/tba/backend/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/tba/backend/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/tba/backend/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/tba/backend/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/tba/backend/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/tba/backend/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/tba/backend/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/tba/backend/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tba/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tba/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tba/src/App.test.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tba/src/app/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tba/src/app/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tba/src/app/views/UserRegistration.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tba/src/app/views/UserRegistration.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tba/src/components/RegistrationForm/RegistrationForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tba/src/components/RegistrationForm/RegistrationForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tba/src/components/RegistrationForm/registrationForm.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tba/src/components/styles/userForms.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/tba/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tba/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,22 +45,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/mathias/Documents/Repos/tba-blog&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/mathias/Documents/Repos/tba-blog/frontend/tba/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/mathias/Documents/Repos/tba-blog/backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "ts.external.directory.path": "/home/mathias/Documents/Repos/tba-blog/frontend/tba/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/frontend/tba/src/app/views" />
@@ -66,11 +82,24 @@
       <workItem from="1671832354853" duration="4899000" />
       <workItem from="1671868024917" duration="6181000" />
       <workItem from="1671874398090" duration="46539000" />
-      <workItem from="1672082515886" duration="6822000" />
+      <workItem from="1672082515886" duration="7037000" />
+      <workItem from="1672159714879" duration="10019000" />
     </task>
+    <task id="LOCAL-00001" summary="registration form react logic with use State and basic styling for &quot;register basic&quot;">
+      <created>1672089494852</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1672089494852</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="registration form react logic with use State and basic styling for &quot;register basic&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="registration form react logic with use State and basic styling for &quot;register basic&quot;" />
   </component>
 </project>

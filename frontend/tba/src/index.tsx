@@ -5,6 +5,7 @@ import {store} from './app/store';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 import RegisterForm from "./app/views/UserRegistration";
+import App from "./App";
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
@@ -12,7 +13,7 @@ const root = createRoot(container);
 root.render(
     <React.StrictMode>
         <Provider store={store}>
-            <RegisterForm/>
+            <App/>
         </Provider>
     </React.StrictMode>
 );

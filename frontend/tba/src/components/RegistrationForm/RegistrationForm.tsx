@@ -2,68 +2,95 @@ import React, {ChangeEvent, FormEvent, useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {Link} from 'react-router-dom';
 import {useAppDispatch, useAppSelector} from "../../app/hooks";
-import {nextView, prevView, REGISTER_BASIC, updateBasic} from "./registerSlice";
-import {FormInput, FormState} from "../../app/views/UserRegistration";
-import "./registrationForm.css";
+import {nextView, prevView, updateBasic} from "./registerSlice";
+import User from "../../app/interfaces/User";
+import "../styles/userForms.css";
 
+export const REGISTER_BASIC = "REGISTER_BASIC";
+export const REGISTER_DETAILS = "REGISTER_DETAILS";
+export const REGISTER_CONFIRM = "REGISTER_CONFIRM";
 
-export default function RegistrationForm(formState: FormState) {
-    // switch formstate.mode
-    // 3 different returns
+export default function RegistrationForm() {
+    const [mode, setMode] = useState(REGISTER_BASIC);
     const [country, setCountry] = useState("United States");
+    const [password, setPassword] = useState('');
+    const [username, setUsername] = useState('');
+    const [firstname, setFirstname] = useState('');
+    const [lastname, setLastname] = useState('');
+    const [email, setEmail] = useState('');
+
+    async function greetUser(username: string){
+        let response = await fetch(`http://localhost:8080/user/get/${username}`);
+
+    }
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        // TODO: add parsing for Username and Password
         e.preventDefault();
-        const user: FormInput = {
-            username: formState.user_input.username,
-            password: formState.user_input.password,
-            firstname: formState.user_input.firstname,
-            lastname: formState.user_input.lastname,
+        const user: User = {
+            username: username,
+            password: password,
+            firstname: firstname,
+            lastname: lastname,
             country: country,
-            email: formState.user_input.email,
+            email: email,
         }
-        console.log(user);
         fetch("http://localhost:8080/user/add", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(user)
         }).then(() => {
-            console.log("New user added.")
+            console.log("New user added.");
+            setMode(REGISTER_CONFIRM);
         })
     }
 
-    switch (formState.input_mode) {
+    switch (mode) {
         case REGISTER_BASIC:
             return <>
                 <fieldset>
                     <legend> Choose a Username and Password</legend>
                     <h3></h3>
                     <div className="register-field">
-
                         <label htmlFor="username">Username: </label>
                         <input id="username" type="text" name="username" placeholder="...username"
                                className="register-input_text"
-                               value={formState.user_input.username}
-                               onChange={(e: React.ChangeEvent<HTMLInputElement>) => formState.set_form(formState, e)}/>
+                               value={username}
+                               onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                                   e.preventDefault();
+                                   setUsername(e.currentTarget.value);}
+                               }/>
                     </div>
                     <div className="register-field">
                         <label htmlFor="password">Password: </label>
                         <input id="password" type="text" name="password" placeholder="...password"
-                               value={formState.user_input.password}
-                               onChange={(e: React.ChangeEvent<HTMLInputElement>) => formState.set_form(formState, e)}/>
+                               value={password}
+                               onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                               e.preventDefault();
+                               setPassword(e.currentTarget.value);}
+                               }/>
                     </div>
                     <div className="register-field">
                         <label htmlFor="em"> Email: </label>
                         <input id="em" type="email" name="email" placeholder="Your email..."
-                               value={formState.user_input.email}
-                               onChange={(e: React.ChangeEvent<HTMLInputElement>) => formState.set_form(formState, e)}/>
+                               value={email}
+                               onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                               {
+                                   e.preventDefault();
+                                   setEmail(e.currentTarget.value);
+                               }
+                               }/>
                     </div>
                     <div className="register-button">
                         <button name="back" value="Back"
-                                onClick={(e: React.MouseEvent<HTMLButtonElement>) => formState.set_mode(formState, e)}>
+                                onClick={() => {
+                                    setMode(REGISTER_BASIC);
+                                }}>
                             Back
                         </button>
                         <button name="next" value="Next"
-                                onClick={(e: React.MouseEvent<HTMLButtonElement>) => formState.set_mode(formState, e)}>
+                                onClick={() => {
+                                    setMode(REGISTER_DETAILS);
+                                }}>
                             Next
                         </button>
                     </div>
@@ -78,28 +105,33 @@ export default function RegistrationForm(formState: FormState) {
                             <div className="register-field">
                                 <label htmlFor="fn">Firstname: </label>
                                 <input id="fn" type="text" name="firstname" placeholder="Your first name..."
-                                       value={formState.user_input.firstname}
+                                       value={firstname}
                                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                                           formState.set_form(formState, e);
+                                           e.preventDefault();
+                                           setFirstname(e.currentTarget.value);
                                        }}/>
                             </div>
                             <div className="register-field">
                                 <label htmlFor="fn">Lastname: </label>
                                 <input type="text" id="lastname" placeholder="Your last name..."
-                                       value={formState.user_input.lastname}
+                                       value={lastname}
                                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                                           formState.set_form(formState, e);
+                                           e.preventDefault();
+                                           setLastname(e.currentTarget.value);
                                        }}/>
                             </div>
                             <div className="register-field">
                                 <label htmlFor="country">Country: </label>
                                 <select name="country" id="country"
-                                        value={formState.user_input.country}
+                                        value={country}
                                         onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
                                             setCountry(e.currentTarget.value);
-                                            console.log("State of Country changed to: "+ country);
+                                            console.log("State of Country changed to: " + country);
                                         }}
-                                        onSelect={(e: React.ChangeEvent<HTMLSelectElement>) => formState.set_select(formState, e)}>
+                                        onSelect={(e: React.ChangeEvent<HTMLSelectElement>) => {
+                                            e.preventDefault();
+                                            setCountry(e.currentTarget.value);
+                                        }}>
                                     <option value="0">-- Select Country --</option>
                                     <option value="United States">United States</option>
                                     <option value="Canada">Canada</option>
@@ -341,18 +373,20 @@ export default function RegistrationForm(formState: FormState) {
                             </div>
                             <div className="register-button">
                                 <button name="back" value="Back"
-                                        onClick={(e: React.MouseEvent<HTMLButtonElement>) => formState.set_mode(formState, e)}>
+                                        onClick={() => {
+                                            setMode(REGISTER_BASIC);
+                                        }}>
                                     Back
                                 </button>
-                                <input type="submit" name="submit" value="Submit" onClick={(e: React.MouseEvent<HTMLInputElement>) => formState.set_mode(formState, e)}/>
+                                <input type="submit" name="submit" value="Submit"/>
                             </div>
                         </fieldset>
                     </form>
                 </div>
             </>
         case "REGISTER_CONFIRM":
-            fetch("http://localhost:8080/user/getAll").then( (res:Response) => JSON.stringify(res) ).then( (result:string)=>{console.log(result);})
-                    return <>
+            greetUser(username);
+            return <>
                 <div className="register-form">
                     <button name="done" value="Done"/>
                 </div>

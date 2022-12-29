@@ -1,29 +1,39 @@
 package com.tba.backend.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
 import java.util.Objects;
 
-@Entity(name="`user`")
+@Entity(name = "`user`")
+
 public class User {
-    private @Id @GeneratedValue Long id;
+    private @Id
+    @GeneratedValue Long id;
+    @Column(unique = true)
     private String username;
+    @Column(unique = true)
     private String password;
     private String firstname;
     private String lastname;
     private String country;
+    @Column(unique = true)
     private String email;
-    public User (){};
 
-    public User(long id_, String username_, String password_, String firstname_, String lastname_, String country_)
-    {
+    public User() {
+    }
+
+    ;
+
+    public User(long id_, String username_, String password_, String firstname_, String lastname_, String country_, String email) {
         this.username = username_;
         this.password = password_;
         this.firstname = firstname_;
         this.lastname = lastname_;
         this.country = country_;
-    };
+        this.email = email;
+    }
+
+    ;
 
     public Long getId() {
         return id;
@@ -72,6 +82,7 @@ public class User {
     public void setUsername(String username) {
         this.username = username;
     }
+
     public String getName() {
         return this.firstname + " " + this.lastname;
     }
