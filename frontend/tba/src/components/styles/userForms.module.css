@@ -1,7 +1,8 @@
-fieldset{
+.register{
+    z-index: -1;
     position: relative;
-    left: 30vw;
-    top: 20vh;
+    left: 35vw;
+    top: 15vh;
     width: 50vw;
     max-width: 600px;
     height: 60vh;
@@ -10,25 +11,26 @@ fieldset{
     padding: 10px;
     /*justify-content: center;*/
 }
+/*z - index */
 
 legend {
     font-size: 35px;
 }
 
-.register-field label {
+.registerField label {
     margin-left: 5%;
     display: block;
     font-size: 30px ;
     max-font-size: 1px;
     }
 
-.register-field {
+.registerField {
     margin-top: 5%;
     margin-bottom: 5%;
     margin-left: 15%;
 }
 
-.register-field input,select {
+.registerField input,select {
     padding: 2%;
     margin-left: 5%;
     font-size: 2vw;
@@ -36,16 +38,18 @@ legend {
     max-height: 100px;
 }
 
-.register-button{
+.registerButton{
     text-align: center;
 }
 
-button, .register-button input{
+button, .registerButton input{
     width: 90px;
     height: 55px;
     display: inline-block;
     margin-left: 10px;
 }
+
+
 
 button[name="back"] {
 

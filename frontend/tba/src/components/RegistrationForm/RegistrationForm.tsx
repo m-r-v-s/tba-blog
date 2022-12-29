@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 import {useAppDispatch, useAppSelector} from "../../app/hooks";
 import {nextView, prevView, updateBasic} from "./registerSlice";
 import User from "../../app/interfaces/User";
-import "../styles/userForms.css";
+import "../styles/userForms.module.css";
 
 export const REGISTER_BASIC = "REGISTER_BASIC";
 export const REGISTER_DETAILS = "REGISTER_DETAILS";
@@ -47,7 +47,7 @@ export default function RegistrationForm() {
     switch (mode) {
         case REGISTER_BASIC:
             return <>
-                <fieldset>
+                <fieldset className="register">
                     <legend> Choose a Username and Password</legend>
                     <h3></h3>
                     <div className="register-field">
@@ -100,7 +100,7 @@ export default function RegistrationForm() {
             return <>
                 <div className="register-form">
                     <form onSubmit={handleSubmit}>
-                        <fieldset>
+                        <fieldset className="register">
                             <legend> About yourself</legend>
                             <div className="register-field">
                                 <label htmlFor="fn">Firstname: </label>
