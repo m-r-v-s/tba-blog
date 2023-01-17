@@ -2,13 +2,18 @@ package com.tba.backend.model;
 
 import jakarta.persistence.*;
 
+import java.io.Serial;
+import java.io.Serializable;
 import java.util.Objects;
+import java.util.Set;
 
-@Entity(name = "`user`")
+@Entity
+@Table(name = "user")
 
-public class User {
-    private @Id
-    @GeneratedValue Long id;
+public class User implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 4811021970329886090L;
+    private @Id @GeneratedValue Long id;
     @Column(unique = true)
     private String username;
     @Column(unique = true)
@@ -19,12 +24,17 @@ public class User {
     @Column(unique = true)
     private String email;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private Role role;
+
     public User() {
     }
 
     ;
 
-    public User(long id_, String username_, String password_, String firstname_, String lastname_, String country_, String email) {
+    public User(long id_, String username_, String password_, String firstname_, String lastname_, String country_,
+            String email) {
         this.username = username_;
         this.password = password_;
         this.firstname = firstname_;
@@ -101,5 +111,12 @@ public class User {
         this.lastname = parts[1];
     }
 
-}
+    public Role getRole() {
+        return role;
+    }
 
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
+}

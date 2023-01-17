@@ -1,4 +1,4 @@
-package com.tba.backend.service;
+package security.services;
 
 import com.tba.backend.model.User;
 import org.springframework.context.annotation.Bean;
@@ -11,4 +11,6 @@ public interface UserService {
     public List<User> getAllUsers();
 
     public User getUserByUsername(String name);
+
+    public void setUserRole(String rolename, String username);
 }
